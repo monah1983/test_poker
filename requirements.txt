@@ -1,0 +1,9 @@
+selenium
+webdriver-manager
+pytest
+allure-pytest
+allure-python-commons
+python-dotenv
+faker
+pytest-xdist
+pytest-rerunfailures
