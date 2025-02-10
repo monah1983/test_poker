@@ -19,7 +19,7 @@ class MainPage(BasePage):
     def open_sing_up_window(self):
         self.click(LoginLocators.SING_UP_BUTTON)
 
-    def is_class_present(self, locator: tuple) -> bool:
+    def is_class_present(self, locator: tuple [str, str]) -> bool:
         try:
             WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(locator))
             return True

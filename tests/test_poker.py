@@ -1,6 +1,5 @@
 import allure
 import pytest
-import time
 
 from faker import Faker
 from locators.login import LoginLocators
@@ -114,7 +113,7 @@ def test_start_first_game_casino(browser, manager, host):
         manager.main_page.click(CasinoLocators.PLAY_BUTTON)
 
     with allure.step("Wait for game to start"):
-        is_game = manager.casino_page.wait_for_game_start(timeout=80)
+        is_game = manager.casino_page.wait_for_game_start()
 
     assert is_game, 'Game is not loaded'
 
